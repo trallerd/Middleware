@@ -16,11 +16,6 @@
                 <td>{{ $item->nome }}</td>
                 <td>{{ $item->email }}</td>
                 <td>{{ $item->curso->nome }}</td>
-                <td><select class="form-select">
-                        @foreach($item->disciplina as $item)
-                        <option value="{{$item->id}}"> {{$item->nome}} </option>
-                        @endforeach
-                    </select></td>
                 @elseif($tag[0]=='professor')
                 <td>{{ $item->nome }}</td>
                 <td>{{ $item->email }}</td>
@@ -33,9 +28,6 @@
                 @endif
                 <td>
                     <a nohref style="cursor:pointer" onClick="editar('{{$item->id}}')"><img src="{{ asset('img/icons/edit.svg') }}"></a>
-                    @if($tag[0]=='aluno')
-                    <a nohref style="cursor:pointer" href="{{ route('matricula.index').'?aluno_id='.$item->id}}"><img src="{{ asset('img/icons/settings.svg') }}"></a>
-                    @endif
                 </td>
             </tr>
             </form>

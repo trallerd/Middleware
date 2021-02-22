@@ -21,4 +21,3 @@ Route::resource('curso', 'CursoController');
 Route::resource('professor', 'ProfessorController');
 Route::resource('disciplina', 'DisciplinaController');
 Route::resource('aluno', 'AlunoController');
-Route::resource('matricula', 'MatriculaController');

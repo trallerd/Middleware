@@ -10,7 +10,7 @@
     </button>
 </div>
 <br>
-<x-tablelist :header="['Nome', 'Email','Curso','Diciplina','Eventos']" :data="$alunos" :tag="['aluno']" />
+<x-tablelist :header="['Nome', 'Email','Curso','Eventos']" :data="$alunos" :tag="['aluno']" />
 <div class="modal fade" tabindex="-1" role="dialog" id="modalAluno">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -148,11 +148,8 @@
             "<td>" + aluno.nome + "</td>" +
             "<td>" + aluno.email + "</td>" +
             "<td>" + aluno.curso.nome + "</td>" +
-            "<td><select >" +
-            "</select></td>" +
             "<td>" +
             "<a nohref style='cursor:pointer' onClick='editar(" + aluno.id + ")'><img src={{ asset('img/icons/edit.svg') }}></a>" +
-            "<a nohref style='cursor:pointer' href='{{ route('matricula.index').'?aluno_id='." + aluno.id + "}}'><img src='{{ asset('img/icons/settings.svg') }}'></a> " +
             "</td>" +
             "</tr>";
 

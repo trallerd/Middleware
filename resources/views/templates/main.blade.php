@@ -28,7 +28,9 @@
     <div class="container-fluid">
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark d-flex justify-content-between ">
             <div class="d-flex ">
-                @if($tag=='cur')
+                @if($tag=='neg')
+                <img width="45" height="45" src="{{ asset('img/icons/restrito.png') }}" alt="NEGADO">
+                @elseif($tag=='cur')
                 <img src="{{ asset('img/icons/curso.png') }}" alt="CURSO">
                 @elseif($tag=='home')
                 <img src="{{ asset('img/icons/home.png') }}" alt="HOME">
